@@ -1,23 +1,16 @@
-// Function to check divisibility
-function checkDivisibility() {
-    // Prompt user for a number
-    let number = parseFloat(prompt("Enter a number:"));
-    // Prompt user for a divisor
-    let divisor = parseFloat(prompt("Enter a divisor:"));
+const inputarray = [1,2,3,4,5,6,7,8,9,10]
 
-    // Check if divisor is not zero
-    if (divisor === 0) {
-        console.log("Division by zero is not allowed.");
-        return;
-    }
+const evennumbers = []
+const oddnumbers = []
 
-    // Check divisibility
-    if (number % divisor === 0) {
-        console.log(`${number} is divisible by ${divisor}.`);
+inputarray.forEach((num) => {
+    if (num % 2 === 0){
+        evennumbers.push(num)
     } else {
-        console.log(`${number} is not divisible by ${divisor}.`);
+        oddnumbers.push(num)
     }
-}
+})
+console.log("Original Array",inputarray)
+console.log("Evennumbers Array",evennumbers)
+console.log("Oddnumbers Array",oddnumbers)
 
-// Call the function
-checkDivisibility();
